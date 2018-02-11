@@ -1,0 +1,201 @@
+/* Your CSS goes here */
+#kk2{
+  background-color: #808000;
+}
+
+#wrapper2{
+  background-color: #FFFFFF;
+}
+#kk{
+  background-color: #000000;
+}
+#main {
+  text-align: center;
+ /* background-color: #D3D3D3;*/
+ margin-top: 100px;
+}
+#main1{
+  text-align: center;
+  /*background-color: black;*/
+}
+
+#close {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  z-index: 1000;
+}
+#close img {
+  width: 100%;
+}
+
+@media (min-width: 801px) {
+  #close {
+    top: 104px;
+  }
+}
+
+
+#aaa {
+    width:100%;
+    height:10%;
+   
+}
+
+#distance{
+    font-size: 3em;
+    line-height: .3em;
+  
+}
+#fuellevel{
+  font-size: 8em;
+    line-height: .8em;
+}
+
+#km{
+    font-size: 4em;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: green;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/*div.button1 {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+
+
+}*/
+.button2 {
+  height: 64px;
+  width: 64px;
+  margin-left: 10px;
+ 
+ 
+
+
+}
+
+/*div.button:hover {
+  border-color: red;
+  color:turquoise;
+
+}*/
+
+img{
+  margin-left: auto;
+  margin-right: auto;
+  width : 80px;
+  height: 80px;
+}
+
+h1{
+  color: #FF00FF;
+}
+
+.bbb{
+  
+  /*position: absolute;*/
+  float: left;
+  top: 90px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  z-index: 1000;
+  /*
+  float:left;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  width : 40px;
+  height: 40px;*/
+}
+
+.row{
+  margin-top: 10px;
+}
+
+
+
+.col-md-6{
+  border-radius: 11%;
+}
+
+.video1{
+  margin-top: 100px;
+  margin: auto;
+}
+
+.video2{
+   margin: auto;
+}
+
+.video3{
+   margin: auto;
+}

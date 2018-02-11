@@ -1,0 +1,14 @@
+{
+  "name":"NGI-TravelSafe",
+  "id":"90909026",
+  "template": "Blank",
+  "version": "0.0.0",
+  "src": "src",
+  "dist": "dist",
+  "main": "index.html",
+  "icon": "Icon.png",
+  "developer": "fanta",
+  "category": "General",
+  "type": "Local",
+  "description": "Generated on 2018-2-2 22:35:44 by ngi-sdk version "
+}

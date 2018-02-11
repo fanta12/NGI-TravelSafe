@@ -1,0 +1,10 @@
+/*Fanta Tiéhoua SILUE Student at dhar el Mehraz faculty of science (USMBA Fès-Morroco)*/
+
+Description of my project
+
+This present project shows as how much distance a driver has made during travel and the level of fuel he has for the rest of the travel.
+
+The objective is that if the driver passes the 200 kilometers he must take a break to avoid tiredness and accident.
+Else he can continue till 200 kilometers if the fuel level is over 50%.
+
+For the break during the travel there is a proposal of distraction like video that he can watch. the video can be personalized as he wants.

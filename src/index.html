@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>distance parcourue</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Base css, but you'll likely want to keep them -->
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <!-- Your custom files -->
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+  <script src="GMLIB/system.js"></script>
+    <script src="GMLIB/info.js"></script>
+    <script src="GMLIB/comm.js"></script>
+    <script src="GMLIB/io.js"></script>
+    <script src="GMLIB/media.js"></script>
+    <script src="GMLIB/monitor.js"></script>
+    <script src="GMLIB/nav.js"></script>
+    <script src="GMLIB/phone.js"></script>
+    <script src="GMLIB/ui.js"></script>
+    <script src="GMLIB/util.js"></script>
+    <script src="GMLIB/voice.js"></script>
+
+
+  </head>
+  <body id="kk">
+    <div id="wrapper">
+      <div id="close"><img src="images/close.png" onclick="gm.system.closeApp();" alt="close"></div>
+      <div id="main">
+					<h1 style="color:#800080;"><b>TravelSafe Dashboard </b></h1>
+					<!--<div id="first">
+							<img src="images/aaa.jpg" id = "aaa"/>
+					</div>-->
+					
+			
+					
+					 <div class="row" >
+                                <!--style="margin-top:5px; border-right:5px"-->
+									<div class="col-md-6" style="background-color:#BDB76B; height:80px" style="border-left:5px; height:80px" style="border-left:10px ; border-radius: 20%">
+                                        <!--style="background-color:#00CED1; height:100px"-->
+											<div class="instruments">
+													<h2><b>Distance-Traveled</b></h2>
+													<div id="distance" hidden></div>
+											</div>
+											<label class="switch">
+													<input id="unitSwitch" type="checkbox" onclick='changeUnits(this);' >
+													<div class="slider round"></div>
+											</label>
+									</div>
+                                    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+									<div class="col-md-6" style="background-color:#BDB76B; height:80px" style="border-left:5px; height:80px" style="border-left:10px ; border-radius: 20%">	
+												<div class="instruments">
+													<h2><b>Fuel Level</b></h2>
+												    <div id="fuel" hidden >---</div>
+									      </div>
+								  <label class="switch">
+											  <input id="unitSwitch2" type="checkbox" onclick='changeUnits(this);' >
+							          <div class="slider round"></div>
+                                     </label>
+                                 </div>                                                      
+                                    
+                <div class="col-md-6" style="background-color:#BDB76B; height:80px" style="border-left:5px; height:80px" style="border-left:10px ; border-radius: 20%">	
+										<div class="instruments">
+												<h2><b>Car state</b></h2>
+											 <div id="decision" hidden ></div>
+                    </div>
+                    <label class="switch">
+                        <input id="unitSwitch3" type="checkbox" onclick='changeUnits(this);' >
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+								
+								
+								<div class="button">
+						      <h1 style="color:blue;"><b>Click on this image for distraction !!! </b></h1>
+						      <a href="index2.html" >
+							        <img src="images/logovideo.jpeg" alt="dashboard" />
+						      </a>
+					      </div>
+								
+							
+					               
+                        
+	        </div>
+                                    
+                                     
+                        
+	        </div>
+
+				</div>
+			</div>
+
+
+    <!-- Your app code: -->
+    <script src="js/app.js"></script>
+		
+		<script>
+   	   var unit = document.getElementById('unitSwitch');
+			 
+            unit.addEventListener('click', function(e) {
+                e.preventDefault();
+		        alert('You have traveled '+distance.innerHTML+" km" );
+            
+            });
+		</script>
+		
+		<script>
+   	   var unit2 = document.getElementById('unitSwitch2');
+			 
+            unit2.addEventListener('click', function(e) {
+                e.preventDefault();
+		        alert('your fuel level is '+fuel.innerHTML+" %" );
+           
+            });
+  
+		</script>
+		
+			<script>
+   	   var unit3 = document.getElementById('unitSwitch3');
+			 
+            unit3.addEventListener('click', function(e) {
+                e.preventDefault();
+		        alert('your fuel level '+fuel.innerHTML+" % and your distanced traveled is "+ distance.innerHTML +" km "  );
+           
+            });
+            unit3.addEventListener('click', function(e1) {
+               e1.preventDefault();
+							 
+							// alert('You have traveled '+distance.innerHTML+" km so you can take a break :)");
+		
+               if(parseInt(distance.innerHTML)>200 && parseInt(fuel.innerHTML)<50)
+										alert('you have traveled a lot please take a break :) ');
+							 else{
+									if(parseInt(distance.innerHTML)>200 && parseInt(fuel.innerHTML)>50)
+									alert('dont worry you are secure in fuel you can continue but think to make et break');
+									else
+											if(parseInt(distance.innerHTML)<200 && parseInt(fuel.innerHTML)>50)
+												alert("continue running ");
+												else
+													alert("your fuel is not sufficient to continue road ");
+										
+							 }
+			           
+            });
+		</script>
+		
+          		
+
+    <!-- Your app code: -->
+    <script src="js/app.js"></script>
+		
+		
+		
+  </body>
+</html>
